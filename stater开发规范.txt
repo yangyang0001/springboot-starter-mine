@@ -7,7 +7,25 @@
 
 
 自定义 starter 的过程:
-    1、创建一个 maven 工程
-    2、创建配置类
+    1、创建一个 maven 工程, 引入相关依赖
+        <!-- 自动配置核心包, 必须使用 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <!-- 自动配置优化 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+    2、创建配置类, 完成相关的默认配置等
+
     3、创建自动配置类, 使用 @Configuration 或者 @Bean 来进行自动装配
+
     4、src/main/resources/META-INF/ 文件夹下创建一个 spring.factories 文件, 内部写自动配置类
+
+测试:
+    在 springboot-starter-mine-test 中使用,  对 springboot-starter-mine 工程进行 package, 然后在 本项目中 引入依赖!
