@@ -1,0 +1,13 @@
+命名规范:
+    官方规范:
+        spring-boot-starter-模块名称 举例: spring-boot-starter-aop
+
+    三方规范:
+        模块名称-spring-boot-starter 举例: mybatis-spring-boot-starter
+
+
+自定义 starter 的过程:
+    1、创建一个 maven 工程
+    2、创建配置类
+    3、创建自动配置类, 使用 @Configuration 或者 @Bean 来进行自动装配
+    4、src/main/resources/META-INF/ 文件夹下创建一个 spring.factories 文件, 内部写自动配置类
